@@ -7,9 +7,20 @@
 
     <div class="py-12">
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
-            <div class="bg-white overflow-hidden shadow-xl sm:rounded-lg">
-                <x-welcome />
-            </div>
+
+            @php
+                $type = 'danger';
+            @endphp
+            
+        <x-alert2 :type="$type" id="alerta" class="mb-4">
+            <x-slot name="title">
+                Este es el título desde el slot 2
+            </x-slot>
+            <p>Este es un texto de prueba</p>
+        </x-alert2>
+
+        <p>Hola Mundo</p>
+
         </div>
     </div>
 </x-app-layout>
